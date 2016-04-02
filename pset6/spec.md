@@ -1,0 +1,1 @@
+[link](https://cdn.cs50.net/2015/x/psets/6/pset6/pset6.html)
