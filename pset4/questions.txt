@@ -1,0 +1,47 @@
+0.  BMP - supports 16M colours
+    GIF - 256
+    JPEG - 16M
+    PNG - 256T
+    
+1.  Of these file types, only GIF supports animation
+
+2.  Lossy compression discards some data in order to reduce data size.
+    Lossless compression does not lose any data.
+   
+3.  Of these file types, JPEG is lossy-compressed
+
+4.  When a file is deleted on a FAT file system, the file data remains in memory - the pointers to that file are deleted
+
+5.  Files can be overwritten (in memory) to ensure with high probability that the 'deleted' files cannot be recovered.
+
+6.  stdint.h is a header file in the C standard library introduced in the C99 standard library section 7.18 
+    to allow programmers to write more portable code by providing a set of typedefs that specify exact-width 
+    integer types, together with the defined minimum and maximum allowable values for each type, using macros (wikibooks)
+    
+7.  using these types allows use across different platforms
+
+8.  BYTE - 1 byte
+    DWORD - 3
+    LONG - 3
+    WORD - 2
+
+9.  The first 3 bytes of any BMP file must be 'B' and 'M'
+
+10. bfSize is the size, in bytes, of the bitmap file
+    biSize is the size, ibytes, of the structure BITMAPINFOHEADER
+    
+11. If biHeight is negative, the bitmap is "top-down", and its origin is in the upper-left corner
+
+12. The field biBitCount specifies the file's colour-depth (the number of bits per pixel)
+
+13. fopen() might return null if the file doesn't exist, or the user doesn't have correct permissions
+
+14. because we only want to read it once
+
+15. padding = 3
+
+16. fseek() changes the offset of a file pointer
+
+17. SEEK_CUR is the current location of the file pointer
+
+18. Rob Bowden
